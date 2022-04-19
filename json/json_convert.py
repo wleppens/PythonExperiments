@@ -42,21 +42,21 @@ print('------1---------')
 print(type(dc_container))
 #print(dc_container)
 print('------2---------')
-v1 = json.loads(dc_container)   ### loads: str => dict (tree)
+v1 = json.loads(dc_container)
 print(type(v1))
 print('------3---------')
-v2 = json.dumps(v1)             ### dumps: dict => str
+v2 = json.dumps(v1) 
 print(type(v2))
 print('------4---------')
-v3 = yaml.dump(v1)              ### dump: dict => yaml (tree)
+v3 = yaml.dump(v1)
 #print(v3)
 #print(dir(yaml))
 ### filteren kan enkel in een dict
-print('------5---------')       ### using index for a list - using keys() for a dict
+print('------5---------') 
 v4 = v1["rack"][0]
-print(type(v4))
+#print(type(v4))
 print(v4["server"]["services"][0].keys())
-print('------5---------')       ### loop through list
+print('------5A---------')
 for v5 in v1["rack"]:
     print('------5A--------')
     print(type(v5))
@@ -65,5 +65,3 @@ for v5 in v1["rack"]:
     print(v5["server"]["os"])
     for v6 in v5["server"]["services"]:
         print(v6["service"], v6["port"])
-print('------5---------')
-print(v5["server"]["services"][0].keys())
