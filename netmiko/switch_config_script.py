@@ -2,7 +2,7 @@ from netmiko import ConnectHandler
 
 cisco_Switch = {
     "device_type": "cisco_ios",
-    "host": "192.168.10.162",
+    "host": "192.168.10.162,
     "username": "admin",
     "password": "cisco",
     "secret": "cisco"}
