@@ -10,7 +10,7 @@ cisco_Switch = {
 with ConnectHandler(**cisco_Switch) as net_connect:
     
     net_connect.enable()
-    output = net_connect.send_config_from_file('iosv_l3_config.txt')
+    output - net_connect.send_config_from_file('iosv_l3_config.txt')
 
     print (output)
     net_connect.disconnect()
